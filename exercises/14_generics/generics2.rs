@@ -6,17 +6,28 @@
 // Execute `rustlings hint generics2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+use std::fmt::Display;
 
-struct Wrapper {
-    value: u32,
+struct Wrapper<T> {
+    value: T,
 }
 
-impl Wrapper {
-    pub fn new(value: u32) -> Self {
+// // generic di rust bisa dikasih contraint
+// impl<T: Display> Wrapper<T> {
+//     pub fn new(value: T) -> Self {
+//         println!("Display: {}", value);
+//         Wrapper { value }
+//     }
+// }
+
+impl<T> Wrapper<T> {
+    pub fn new(value: T) -> Self {
+        // // kalo ga ada contraint, ga bisa di print
+        // println!("Display: {}", value);
         Wrapper { value }
     }
 }
+
 
 #[cfg(test)]
 mod tests {

@@ -8,7 +8,7 @@
 
 fn main() {
     let cat = ("Furry McFurson", 3.5);
-    let (name, age) = cat;
+    let (name, age) = cat; // destructure, mirip js. ini namanya pattern match di rust
 
     println!("{} is {} years old.", name, age);
 }

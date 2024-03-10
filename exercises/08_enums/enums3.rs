@@ -48,13 +48,13 @@ impl State {
         // fn function((t, u, p, l, e))
 
         match message {
-            Message::Move(point) => {
-                println!("ini point");
-                self.move_position(point);
-            },
+            Message::Move(point) => self.move_position(point),
             Message::Echo(msg) => self.echo(msg),
             Message::ChangeColor(r, g, b) => self.change_color((r, g, b)),
             Message::Quit => self.quit(),
+
+            // ini sisanya
+            // _ => self.quit(),
         }
     }
 }

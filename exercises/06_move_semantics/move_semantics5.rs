@@ -18,5 +18,8 @@ fn main() {
     let z = &mut x;
     *z += 1000;
 
+    // gabsia dipake yang y lagi
+    // *y += 10000;
+
     assert_eq!(x, 1200);
 }

@@ -7,7 +7,7 @@
 
 
 fn main() {
-    let a = [0; 100];
+    let a = [0; 100]; // stack, ga bisa di resize
 
     if a.len() >= 100 {
         println!("Wow, that's a big array!");
